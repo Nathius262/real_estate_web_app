@@ -6,3 +6,4 @@ backend/db.sqlite3
 backend/static_cdn/
 backend/media_cdn/
 __pycache__/
+backend/files/
