@@ -1,0 +1,55 @@
+:root{
+    --white: #ffff;
+    --lesswhite: #bababa;
+    --dark-brown: #171717;
+    --cornflowerblue: #475773;
+}
+
+nav{
+    background-color: var(--cornflowerblue) !important;
+}
+
+nav .navbar-brand, .nav-link{
+    color: var(--white);
+}
+
+nav .nav-item a:hover{
+    color: var(--lesswhite);
+}
+nav .nav-item a:hover::after {
+    content: '';
+    background: var(--lesswhite);
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    margin-top: 30px;
+    transform: translateX(-100%);
+}
+
+#main1{
+    background-color: black;
+    background-image: url('../img/bg1.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/bg1.jpeg');
+    background-size:cover;
+}
+
+#main1 .bg2{
+    color: white;
+}
+
+.transitecol{
+	transition: transform 0.7s;
+	cursor: pointer;
+}
+
+.transitecol:hover{
+    transform: translateY(-9px);
+}
+
+#modalSignup form {
+    color: var(--white);
+    font-size: medium;
+    font-weight: bold;
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}

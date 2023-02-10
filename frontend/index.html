@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title></title>
+
+        <link rel="icon" href="" type="image/jpg"  sizes="16x16" />
+        <!---CSS LINK---->
+        <link rel="stylesheet" href="static/css/bootstrap.css" media="all">
+        <link type="text/css" href="static/css/style.css" rel="stylesheet" media="all">
+        <link type="text/css" href="static/css/pageload.css" rel="stylesheet" media="all">
+        <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css" />
+
+        <!-- JQ-CROPPER --->
+        <script src="static/js/jquery-2.1.1.min.js"></script>
+        
+
+    </head>
+    <body>
+        <div id="pageload">
+            <div class="pageload">
+                <div class="pageload_inner">
+                </div>
+                <span class="loading">loading...</span>
+            </div>
+            <script>
+                var pageload = document.getElementById('pageload')
+                window.addEventListener("load", () => {
+                    pageload.style.display = "none"
+                })
+            </script>
+        </div>
+
+        <include src="snippets/header.html"></include>
+
+        <div class="container-fluid" id="main1">
+            <div class="container-fluid bg">
+              <div class="p-5 rounded bg2">
+                <div class="col-sm-8 mx-auto">
+
+                  <h1>Navbar examples</h1>
+                  <p>This example is a quick exercise to illustrate how the navbar and its contents work. Some navbars extend the width of the viewport, others are confined within a <code>.container</code>. For positioning of navbars, checkout the <a href="../examples/navbar-static/">top</a> and <a href="../examples/navbar-fixed/">fixed top</a> examples.</p>
+                  <p>At the smallest breakpoint, the collapse plugin is used to hide the links and show a menu button to toggle the collapsed content.</p>
+                  <p>
+                    <a class="btn btn-primary" href="../components/navbar/" role="button">View navbar docs »</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="">
+                <div class="container px-4 py-5" id="custom-cards">
+                    <h2 class="pb-2 border-bottom">Latest Property</h2>                    
+                    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5"  id="objAppend">
+                    </div>
+                </div>
+            </div>            
+        </section>
+
+        <!---login modal----->
+        <section id="sectionModal1">
+            <div class="modal modal-tour py-5" tabindex="-1" role="dialog" id="modalLogin">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+                  <div class="modal-body p-5">
+                    <h4 class="mb-3">Login</h4>
+                    <form class="needs-validation" id="formObj" novalidate="">
+                      <div class="row g-3">
+            
+                        <div class="col-12">
+                          <label for="email" class="form-label">Email</label>
+                          <input name="email" type="email" class="form-control" id="email" placeholder="you@example.com" required="" autocomplete="email">
+                          <div class="invalid-feedback">
+                            Please enter a valid email address.
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="password" class="form-label">password</label>
+                            <input name="password" type="password" class="form-control" id="password" placeholder="password" required="" autocomplete="password">
+                            <div class="invalid-feedback">
+                              Please enter a valid password.
+                            </div>
+                        </div>
+
+                        <div class="text-danger" id="errormsg">
+                        </div>
+            
+                      <hr class="my-4">
+                      <button class="w-100 btn btn-primary btn-lg" type="submit">Login</button>
+                    </form>
+                    
+                    <!----<button type="button" class="btn btn-lg btn-primary mt-5 w-100" data-bs-dismiss="modal">Great, thanks!</button>----->
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!---logout modal----->
+        <section id="sectionModal1">
+          <div class="modal modal-tour py-5" tabindex="-1" role="dialog" id="modalLogout">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content rounded-4 shadow">
+                <div class="modal-body p-5">
+                  <h4 class="mb-3 text-center h2">Logout</h4>
+                  <div class="row g-3">
+                    <p>Are you sure you want to logout from this device?</p>
+                  </div> 
+                  <div class="row ">
+                    <div class="btn btn-primary col m-2 fs-4" onclick="logout(true)">ok</div>
+                    <div class="btn btn-danger col m-2 fs-4" onclick="logout(false)">cancel</div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+        <include src="snippets/footer.html"></include>
+        <script src="static/js/bootstrap.js"></script>
+        <script type="text/javascript" src="static/js/main.js"></script>
+        <script>
+          
+          window.addEventListener('DOMContentLoaded', () =>{
+            setTimeout(() => {
+              is_loggedIn()
+            }, 3000)
+
+            geteData()
+            
+          })
+        </script>
+    </body>   
+    
+</html>
